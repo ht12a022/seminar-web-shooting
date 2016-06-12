@@ -6,16 +6,19 @@
   $("#easy").click(function(){
     enemySpeed = 150;
     enemyBurret = 500;
+    $("h2").hide();
     start();
   });
   $("#normal").click(function(){
     enemySpeed = 100;
     enemyBurret = 300;
+    $("h2").hide();
     start();
   });
   $("#hard").click(function(){
     enemySpeed = 100;
     enemyBurret = 200;
+    $("h2").hide();
     start();
   });
 
