@@ -31,6 +31,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 			enemy.moveRight();
 		}
 
+
 		if (!enemy_direction && enemy.getX() <= 0) {
 			// 敵機を反転させる
 			enemy_direction = !enemy_direction;
@@ -68,7 +69,10 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 			player.moveRight();
 		} else if (keycode == 32) { // スペースキーならば
 			// 自機から弾を発射
+
+//			player.B_fire();
 			player.fire();
+
 		}
 
 	});
