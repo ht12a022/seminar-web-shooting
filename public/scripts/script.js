@@ -16,8 +16,8 @@
     start();
   });
   $("#hard").click(function(){
-    enemySpeed = 100;
-    enemyBurret = 200;
+    enemySpeed = 20;
+    enemyBurret = 60;
     $("h2").hide();
     start();
   });
