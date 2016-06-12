@@ -8,9 +8,8 @@
  */
 
 body {
-	background-image: url(/images/background.JPG);
-	/*background-color: #333333;
-	color: #ffffff;*/
+	background-color: #333333;
+	color: white;
 	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -22,8 +21,7 @@ body {
  */
 
 #view {
-	/*background-color: rgba(0, 0, 0, 0.5);*/
-	/*background-repeat: no-repeat;*/
+	background-color: rgba(1,150, 150,0);
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -39,9 +37,10 @@ body {
  */
 
 .airplane {
-       background-image: url(/images/airplane.png);
-       background-repeat: no-repeat;
-       position: absolute;
-       width: 100px;
-       height: 100px;
+	background-image: url(/images/s_dot03b.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100px;
+	height: 100px;
 }
