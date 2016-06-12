@@ -118,7 +118,7 @@ var img_url;
 			clearInterval(interval);
 		}
 
-	}, 20);
+	}, 10);
 
 };
 
@@ -159,10 +159,10 @@ Airplane.prototype.moveFront = function (opt_speed) {
 
 	if (self.isReverse) { // 機体が反転しているならば
 		// 画面下方向へずらす
-		self.moveTo(self.getX(), self.getY() + 10);
+		self.moveTo(self.getX(), self.getY() + 30);
 	} else { // 機体が順向(上向き)ならば
 		// 画面上方向へずらす)
-		self.moveTo(self.getX(), self.getY() - 10);
+		self.moveTo(self.getX(), self.getY() - 30);
 	}
 
 };
@@ -178,10 +178,10 @@ Airplane.prototype.moveBack = function (opt_speed) {
 
 	if (self.isReverse) { // 機体が反転しているならば
 		// 画面上方向へずらす
-		self.moveTo(self.getX(), self.getY() - 10);
+		self.moveTo(self.getX(), self.getY() - 30);
 	} else { // 機体が順向(上向き)ならば
 		// 画面下方向へずらす
-		self.moveTo(self.getX(), self.getY() + 10);
+		self.moveTo(self.getX(), self.getY() + 30);
 	}
 
 };
@@ -196,9 +196,9 @@ Airplane.prototype.moveLeft = function (opt_speed) {
 	var self = this;
 
 	if (self.isReverse) { // 機体が反転しているならば
-		self.moveTo(self.getX() + 10, self.getY());
+		self.moveTo(self.getX() + 30, self.getY());
 	} else { // 機体が順向(上向き)ならば
-		self.moveTo(self.getX() - 10, self.getY());
+		self.moveTo(self.getX() - 30, self.getY());
 	}
 
 };
@@ -213,9 +213,9 @@ Airplane.prototype.moveRight = function (opt_speed) {
 	var self = this;
 
 	if (self.isReverse) { // 機体が反転しているならば
-		self.moveTo(self.getX() - 10, self.getY());
+		self.moveTo(self.getX() - 30, self.getY());
 	} else { // 機体が順向(上向き)ならば
-		self.moveTo(self.getX() + 10, self.getY());
+		self.moveTo(self.getX() + 30, self.getY());
 	}
 
 };

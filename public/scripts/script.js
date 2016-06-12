@@ -5,17 +5,17 @@
  $(function(){
   $("#easy").click(function(){
     enemySpeed = 150;
-    enemyBurret = 900;
+    enemyBurret = 500;
     start();
   });
   $("#normal").click(function(){
     enemySpeed = 100;
-    enemyBurret = 800;
+    enemyBurret = 300;
     start();
   });
   $("#hard").click(function(){
-    enemySpeed = 20;
-    enemyBurret = 250;
+    enemySpeed = 100;
+    enemyBurret = 200;
     start();
   });
 
