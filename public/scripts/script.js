@@ -5,6 +5,7 @@
 $(function () { // ページの読み込み(正しくはDOMの構築)が完了したとき
 
 
+
 	// 飛行機オブジェクトの初期化 - 自機
 	var player_x = $(window).width() / 2;
 	var player_y = $(window).height() - 100;
@@ -12,6 +13,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 
 	// 飛行機オブジェクトの初期化 - 敵機
 	var enemy = new Airplane($('#enemy'), true);
+
 
 	// 敵機を左右に動かす
 	var enemy_direction = true;
@@ -38,7 +40,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 
 		enemy.fire();
 
-	}, 1500);
+	}, 300);
 
 	// キーが押されたときのイベントハンドラを定義
 	$(window).keydown(function (event) {
@@ -47,7 +49,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 		if (!keycode) return;
 
 		if (keycode == 37) { // カーソルキーの左(←)ならば
-			// 自機を左へ移動
+			// 自機を左へ移動s
 			player.moveLeft();
 		} else if (keycode == 38) { // カーソルキーの上(↑)ならば
 			// 自機を前へ移動
