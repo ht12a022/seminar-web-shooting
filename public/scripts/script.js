@@ -1,17 +1,32 @@
 /**
  * seminar-web-shooting - フロントエンド スクリプト
  */
-$(function () { // ページの読み込み(正しくはDOMの構築)が完了したとき
 
-	$("#start").click(function(){
-		console.log("クリックされたよ");
-		$(this).hide();
-		start();
-	});
+ $(function(){
+  $("#easy").click(function(){
+    enemySpeed = 150;
+    enemyBurret = 900;
+    start();
+  });
+  $("#normal").click(function(){
+    enemySpeed = 100;
+    enemyBurret = 800;
+    start();
+  });
+  $("#hard").click(function(){
+    enemySpeed = 20;
+    enemyBurret = 250;
+    start();
+  });
 
 });
 
-	var start = function(){
+
+var start = function () { // ページの読み込み(正しくはDOMの構築)が完了したとき
+
+  $("#easy").remove();
+  $("#normal").remove();
+  $("#hard").remove();
 
 	// 飛行機オブジェクトの初期化 - 自機
 	var player_x = $(window).width() / 2;
@@ -40,14 +55,14 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 			enemy_direction = !enemy_direction;
 		}
 
-	}, 10);
+	}, enemySpeed);
 
 	// 敵機による弾発射
 	window.setInterval(function () {
 
-		enemy.fire();
-
-	}, 150);
+	//		enemy.R_fire();
+			enemy.fire();
+	}, enemyBurret);
 
 	// キーが押されたときのイベントハンドラを定義
 	$(window).keydown(function (event) {
@@ -57,7 +72,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 
 		if (keycode == 37) { // カーソルキーの左(←)ならば
 			// 自機を左へ移動
-			player.moveLeft();a
+			player.moveLeft();
 		} else if (keycode == 38) { // カーソルキーの上(↑)ならば
 			// 自機を前へ移動
 			player.moveFront();
@@ -70,11 +85,9 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 		} else if (keycode == 32) { // スペースキーならば
 			// 自機から弾を発射
 
-//			player.B_fire();
 			player.fire();
 
 		}
 
 	});
-
 }

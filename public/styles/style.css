@@ -11,6 +11,8 @@ body {
 	background-color: #333333;
 	color: white;
 	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 
@@ -26,7 +28,7 @@ body {
 	left: 0px;
 	right: 0px;
 	height: 100%;
-	width: 100%;
+	width: auto;
 }
 
 
