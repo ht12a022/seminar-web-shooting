@@ -132,7 +132,7 @@ Airplane.prototype.getX = function (opt_speed) {
 
 	var self = this;
 
-	return parseInt(self.$elem.css('left').replace(/(\D+)/, ''));
+	return parseInt(self.$elem.css('left').replace(/px/, ''));
 
 };
 
@@ -145,7 +145,7 @@ Airplane.prototype.getY = function (opt_speed) {
 
 	var self = this;
 
-	return parseInt(self.$elem.css('top').replace(/(\D+)/, ''));
+	return parseInt(self.$elem.css('top').replace(/px/, ''));
 
 };
 
