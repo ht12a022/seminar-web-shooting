@@ -2,9 +2,14 @@
  * seminar-web-shooting - フロントエンド スクリプト
  */
 $(function () { // ページの読み込み(正しくはDOMの構築)が完了したとき
- $("#view").click(function(){
+
+	$("#start").click(function(){
+		console.log("クリックされたよ");
+		$(this).hide();
 		start();
-});});
+	});
+
+});
 
 	var start = function(){
 
@@ -51,7 +56,7 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 
 		if (keycode == 37) { // カーソルキーの左(←)ならば
 			// 自機を左へ移動
-			player.moveLeft();
+			player.moveLeft();a
 		} else if (keycode == 38) { // カーソルキーの上(↑)ならば
 			// 自機を前へ移動
 			player.moveFront();
