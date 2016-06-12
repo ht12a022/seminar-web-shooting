@@ -35,7 +35,8 @@ body {
  */
 
 .airplane {
-	background-image: url(/images/airplane.png);
+	background-image: url(/images/s_dot03b.png);
+	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 100px;
