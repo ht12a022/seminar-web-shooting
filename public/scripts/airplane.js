@@ -79,8 +79,10 @@ Airplane.prototype.fire = function () {
 	});
 
 	// 弾の位置を指定
-	var ball_x = self.getX() + 25; // 機体の中心となるX座標
+  var ball_x = self.getX() + 25 // 機体の中心となるX座標
 	var ball_y = self.getY(); // 機体と同じY座標
+	if (self.isReverse) { // 機体が反転しているならば
+		ball_y += 70 }
 	$ball.css({
 		left: ball_x,
 		top: ball_y
