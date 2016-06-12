@@ -73,8 +73,8 @@ Airplane.prototype.fire = function () {
 	$ball.css({
 		backgroundImage: 'url(/images/ball.png)',
 		backgroundSize: 'contain',
-		height: 50,
-		width: 50,
+		height: 30,
+		width: 30,
 		position: 'absolute'
 	});
 

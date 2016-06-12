@@ -1,9 +1,12 @@
 /**
  * seminar-web-shooting - フロントエンド スクリプト
  */
-
 $(function () { // ページの読み込み(正しくはDOMの構築)が完了したとき
+ $("#view").click(function(){
+		start();
+});});
 
+	var start = function(){
 
 	// 飛行機オブジェクトの初期化 - 自機
 	var player_x = $(window).width() / 2;
@@ -31,14 +34,14 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 			enemy_direction = !enemy_direction;
 		}
 
-	}, 50);
+	}, 10);
 
 	// 敵機による弾発射
 	window.setInterval(function () {
 
 		enemy.fire();
 
-	}, 1500);
+	}, 150);
 
 	// キーが押されたときのイベントハンドラを定義
 	$(window).keydown(function (event) {
@@ -65,4 +68,4 @@ $(function () { // ページの読み込み(正しくはDOMの構築)が完了�
 
 	});
 
-});
+}
